@@ -34,7 +34,8 @@ exports.store = {
             type: 'object',
             properties: {
                 status : { type: 'string', pattern: statusesPattern },
-                products : { type: 'array' }
+                products : { type: 'array', items: {type: 'string'} }
+                
             },
             required: ['products', 'status'],
             additionalProperties: false
