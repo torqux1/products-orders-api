@@ -32,7 +32,7 @@ exports.register = (req, res) => {
             if (results) {
                 res.status(errors.SUCC_OPERATION.code).send({
                     userId: results._id,
-                    username: results._username,
+                    username: results.username,
                 });
             }
         })
