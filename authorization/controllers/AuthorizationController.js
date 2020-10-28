@@ -40,7 +40,6 @@ exports.register = (req, res) => {
             if(err.code === errors.CONFLICT_REQUEST.code){
                 return res.status(err.code).send({message: err.description}); 
             }
-
             res.json({
                 succes: false,
             })

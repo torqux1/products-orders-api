@@ -64,7 +64,7 @@ class ProductsController {
             .catch(err => next(err));
     };
 
-    removeById(req, res, err) {
+    removeById(req, res, next) {
         const orderController = new OrderController();
 
         orderController.getByProductId(req, res)
